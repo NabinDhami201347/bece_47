@@ -1,0 +1,90 @@
+---
+import BaseHead from "../../components/shared/BaseHead.astro";
+import Footer from "../../components/shared/Footer.astro";
+import Header from "../../components/shared/Header.astro";
+import { getCollection } from "astro:content";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { MAX_DISPLAY } from "../../constants";
+import { formatDate } from "../../helpers";
+
+const posts = (await getCollection("dotnet")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      ul {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul li {
+        display: flex;
+      }
+      ul li :global(time) {
+        flex: 0 0 130px;
+        font-style: italic;
+        color: #595959;
+      }
+      ul li a:visited {
+        color: #8e32dc;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 dark:bg-black text-black dark:text-white">
+    <Header />
+    <main class="w-10/12 mx-auto">
+      <section
+        class="grid gap-5 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-5 border-b border-gray-300 dark:border-gray-600 py-6"
+      >
+        {!posts.length && "No posts found."}
+        {
+          posts.slice(0, MAX_DISPLAY).map((post) => {
+            return (
+              <div class="relative h-full rounded-lg">
+                <a
+                  href={`/dotnet/${post.slug}`}
+                  class="relative block h-full overflow-hidden rounded-lg bg-white dark:bg-zinc-900 shadow-lg hover:shadow-md transition border border-transparent p-4"
+                >
+                  <div class="h-full">
+                    <div class="flex items-center justify-between">
+                      <h2 class="mt-2 mb-2 block font-bold text-pink-400">
+                        {post.data.title}
+                      </h2>
+                      <p class="text-sm text-gray-500">
+                        <time>{formatDate(post.data.pubDate)}</time>
+                      </p>
+                    </div>
+
+                    <p class="h-auto text-sm dark:text-gray-200 text-justify">
+                      {post.data.description}
+                    </p>
+                  </div>
+                </a>
+              </div>
+            );
+          })
+        }
+      </section>
+      {
+        posts.length > MAX_DISPLAY && (
+          <div class="flex justify-end text-base font-medium leading-6">
+            <a
+              href="/dotnet"
+              class="my-2 hover:text-sky-400"
+              aria-label="all posts"
+            >
+              All Posts &rarr;
+            </a>
+          </div>
+        )
+      }
+    </main>
+
+    <Footer />
+  </body>
+</html>

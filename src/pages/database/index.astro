@@ -8,7 +8,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { MAX_DISPLAY } from "../../constants";
 import { formatDate } from "../../helpers";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("database")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
@@ -47,7 +47,7 @@ const posts = (await getCollection("blog")).sort(
             return (
               <div class="relative h-full rounded-lg">
                 <a
-                  href={`/blog/${post.slug}`}
+                  href={`/dotnet/${post.slug}`}
                   class="relative block h-full overflow-hidden rounded-lg bg-white dark:bg-zinc-900 shadow-lg hover:shadow-md transition border border-transparent p-4"
                 >
                   <div class="h-full">
@@ -72,10 +72,10 @@ const posts = (await getCollection("blog")).sort(
       </section>
       {
         posts.length > MAX_DISPLAY && (
-          <div class="mt-5 flex justify-end text-base font-medium leading-6">
+          <div class="flex justify-end text-base font-medium leading-6">
             <a
-              href="/blog"
-              class="mt-5 hover:text-sky-400"
+              href="/database"
+              class="my-2 hover:text-sky-400"
               aria-label="all posts"
             >
               All Posts &rarr;

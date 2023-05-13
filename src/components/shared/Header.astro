@@ -1,7 +1,10 @@
 ---
+import { Icon } from "astro-icon";
+
 import { SITE_TITLE } from "../../consts";
 import HeaderLink from "./HeaderLink.astro";
 import ThemeToggle from "./ThemeToggle";
+import Navbar from "./Navbar";
 ---
 
 <header
@@ -12,12 +15,15 @@ import ThemeToggle from "./ThemeToggle";
       {SITE_TITLE}
     </h2>
   </a>
-  <nav class="flex items-center gap-6">
+  <!-- <ThemeToggle client:load /> -->
+  <div class="sm:hidden block">
+    <Navbar client:load />
+  </div>
+  <nav class="hidden sm:flex items-center gap-6">
     <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
-    <HeaderLink href="/about">About</HeaderLink>
-    <HeaderLink href="/services">Services</HeaderLink>
-    <HeaderLink href="/contact">Contact</HeaderLink>
+    <HeaderLink href="/database">Database</HeaderLink>
+    <HeaderLink href="/java">Java Programming</HeaderLink>
+    <HeaderLink href="/dotnet">Microsoft.NET</HeaderLink>
     <ThemeToggle client:load />
     <!-- <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink> -->
     <!-- <HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink> -->

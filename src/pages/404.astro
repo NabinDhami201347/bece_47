@@ -1,0 +1,26 @@
+---
+import Footer from "../components/shared/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import BaseHead from "../components/shared/BaseHead.astro";
+import Header from "../components/shared/Header.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-slate-50 dark:bg-black text-black dark:text-white">
+    <Header title={SITE_TITLE} />
+
+    <main class="w-3/4 mx-auto">
+      <img
+        src="https://th.bing.com/th/id/OIP.FuWXD5OAEc4mJwGp4swt0QHaEF?pid=ImgDet&w=1740&h=960&rs=1"
+        width={700}
+        alt="404"
+        class="w-11/12 p-2"
+      />
+    </main>
+    <Footer />
+  </body>
+</html>
