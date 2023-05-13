@@ -1,11 +1,11 @@
 ---
 import { Icon } from "astro-icon";
-import { items } from "../../constants";
+import { items } from "../constants";
 ---
 
-<section class="w-11/12 mx-auto">
+<section class="w-10/12 mx-auto">
   <div
-    class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 dark:text-white items-stretch"
+    class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 dark:text-white items-stretch cursor-pointer"
   >
     {
       items.map(({ title, description, icon }) => (

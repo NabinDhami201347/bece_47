@@ -1,6 +1,6 @@
 ---
-title: "Third post"
-description: "Lorem ipsum dolor sit amet"
+title: "Converting to TypeScript from React JS"
+description: "After the function name, you must add a colon and the type of the function. In this case, we are typing the function that returns a boolean. We need to state what the function takes in and what it returns."
 pubDate: "Jul 15 2022"
 heroImage: "/placeholder-hero.jpg"
 ---

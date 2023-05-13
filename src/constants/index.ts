@@ -1,5 +1,6 @@
 export const SITE_TITLE = "Creative Nepal";
 export const SITE_DESCRIPTION = "Welcome to my website!";
+export const MAX_DISPLAY = 4;
 
 export const items = [
   {

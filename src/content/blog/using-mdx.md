@@ -1,8 +1,8 @@
 ---
-title: 'Using MDX'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 02 2022'
-heroImage: '/placeholder-hero.jpg'
+title: "GraphQL Basics"
+description: "RESTful routing is a set of conventions that developers follow when creating routes for their API. It's a way of structuring your API so that it's easy to understand and use. RESTful routing is based on the HTTP protocol, which is the standard for how data is transferred on the web."
+pubDate: "Jul 02 2022"
+heroImage: "/placeholder-hero.jpg"
 ---
 
 This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.

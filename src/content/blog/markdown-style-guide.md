@@ -1,6 +1,6 @@
 ---
-title: "Markdown Style Guide"
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+title: "React Hooks: useRef & forwardRef"
+description: "I think it's safe to say that react developers have used the basic hooks like useState, useEffect, and useRef. But as you start to use react more and more, you will find that there are many more hooks. Here are some of the more advanced hooks that I have found useful."
 pubDate: "Jul 01 2022"
 heroImage: "/placeholder-hero.jpg"
 ---
@@ -11,19 +11,31 @@ Here is a sample of some basic Markdown syntax that can be used when writing Mar
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-# H1
+```java
+public class Person {
+    // Variables
+    private String name;
+    private int age;
 
-## H2
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
-### H3
+    // Methods
+    public void sayHello() {
+        System.out.println("Hello, my name is " + name +
+           " and I am " + age + " years old.");
+    }
 
-#### H4
-
-##### H5
-
-###### H6
-
-## Paragraph
+    public void haveBirthday() {
+        age++;
+        System.out.println("Happy birthday! You are now " +
+         age + " years old.");
+    }
+}
+```
 
 Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
 

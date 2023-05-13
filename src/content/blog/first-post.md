@@ -1,6 +1,6 @@
 ---
-title: "First post"
-description: "Lorem ipsum dolor sit amet"
+title: "JavaScript is weird, but TypeScript can help"
+description: "As you all know, JavaScript can be a weird language sometimes. It's not uncommon to come across oddities that can trip you up, especially when you're working with complex codebases or trying to do something outside the box."
 pubDate: "Jul 08 2022"
 heroImage: "/placeholder-hero.jpg"
 ---
