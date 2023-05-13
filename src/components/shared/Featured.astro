@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon";
+import { items } from "../../constants";
+---
+
+<section class="w-11/12 mx-auto">
+  <div
+    class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 dark:text-white items-stretch"
+  >
+    {
+      items.map(({ title, description, icon }) => (
+        <div class="relative flex flex-col p-4 bg-white dark:bg-zinc-900 rounded shadow-lg hover:shadow-md transition border border-transparent ">
+          <div class="flex items-center">
+            <Icon name={icon} class="w-10 h-10" />
+            <div class="ml-4 text-xl font-bold">{title}</div>
+          </div>
+          {description && (
+            <p
+              class="text-muted dark:text-gray-400 text-md mt-2"
+              set:html={description}
+            />
+          )}
+        </div>
+      ))
+    }
+  </div>
+</section>

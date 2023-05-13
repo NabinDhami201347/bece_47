@@ -1,0 +1,25 @@
+---
+import { SITE_TITLE } from "../../consts";
+import HeaderLink from "./HeaderLink.astro";
+import ThemeToggle from "./ThemeToggle";
+---
+
+<header
+  class="sticky top-0 z-20 bg-slate-50 dark:bg-black text-black dark:text-white flex items-center justify-around px-10 py-2 shadow-md"
+>
+  <a href="/">
+    <h2 class="text-lg">
+      {SITE_TITLE}
+    </h2>
+  </a>
+  <nav class="flex items-center gap-6">
+    <HeaderLink href="/">Home</HeaderLink>
+    <HeaderLink href="/blog">Blog</HeaderLink>
+    <HeaderLink href="/about">About</HeaderLink>
+    <HeaderLink href="/services">Services</HeaderLink>
+    <HeaderLink href="/contact">Contact</HeaderLink>
+    <ThemeToggle client:load />
+    <!-- <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink> -->
+    <!-- <HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink> -->
+  </nav>
+</header>
