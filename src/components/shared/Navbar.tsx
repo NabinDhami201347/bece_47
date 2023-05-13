@@ -8,11 +8,12 @@ const Navbar = () => {
     <>
       {open ? (
         <div className="fixed top-0 right-0 w-full h-full backdrop-blur-sm">
-          <RxCross1
-            size={30}
+          <button
             onClick={() => setOpen(false)}
             className="absolute top-6 right-6"
-          />
+          >
+            ❌
+          </button>
           <nav className="flex flex-col w-10/12 mx-auto items-center justify-center mt-10  divide-y-2">
             <a
               href="/"
@@ -42,7 +43,7 @@ const Navbar = () => {
           </nav>
         </div>
       ) : (
-        <RxHamburgerMenu size={30} onClick={() => setOpen(true)} />
+        <button onClick={() => setOpen(true)}>🍔</button>
       )}
     </>
   );
