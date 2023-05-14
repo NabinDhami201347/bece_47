@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import { formatDate } from "../../helpers";
+
+const java = (await getCollection("java")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+const dotnet = (await getCollection("dotnet")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+const database = (await getCollection("database")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+
+const posts = [].concat(java, database, dotnet);
+const filtered = posts.filter(
+  (post) => post.data.title === "Converting to TypeScript from React JS"
+);
+---
+
+<section
+  class="grid gap-5 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-5 border-b border-gray-300 dark:border-gray-600 py-6"
+>
+  {!filtered.length && "No posts found."}
+  {
+    filtered.map((post) => {
+      return (
+        <div class="relative h-full rounded-lg">
+          <a
+            href={`/dotnet/${post.slug}`}
+            class="relative block h-full overflow-hidden rounded-lg bg-white dark:bg-zinc-900 shadow-lg hover:shadow-md transition border border-transparent p-4"
+          >
+            <div class="h-full">
+              <div class="flex items-center justify-between">
+                <h2 class="mt-2 mb-2 block font-bold text-pink-400">
+                  {post.data.title}
+                </h2>
+                <p class="text-sm text-gray-500">
+                  <time>{formatDate(post.data.pubDate)}</time>
+                </p>
+              </div>
+
+              <p class="h-auto text-sm dark:text-gray-200 text-justify">
+                {post.data.description}
+              </p>
+            </div>
+          </a>
+        </div>
+      );
+    })
+  }
+</section>
