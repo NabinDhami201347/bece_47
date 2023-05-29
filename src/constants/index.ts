@@ -1,60 +1,53 @@
-export const SITE_TITLE = "Creative Nepal";
 export const SITE_DESCRIPTION = "Welcome to my website!";
 export const MAX_DISPLAY = 4;
 
 export const items = [
   {
-    title: "Headers",
-    description:
-      "In general, Headers contain information that makes it easier for visitors to interact with the website.",
-    icon: "flat-color-icons:template",
+    icon: "vscode-icons:file-type-html",
   },
   {
-    title: "Heros",
-    description:
-      "If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.",
-    icon: "flat-color-icons:gallery",
+    icon: "vscode-icons:file-type-css",
   },
   {
-    title: "Features",
-    description:
-      "Display your product in action and how the Features actually create a solution for your target customer.",
-    icon: "flat-color-icons:todo-list",
+    icon: "logos:tailwindcss-icon",
   },
   {
-    title: "Content",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: "flat-color-icons:document",
+    icon: "vscode-icons:file-type-typescript-official",
   },
   {
-    title: "Call-to-Action",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: "flat-color-icons:advertising",
+    icon: "logos:c",
   },
   {
-    title: "Pricing",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: "flat-color-icons:currency-exchange",
+    icon: "logos:c-plusplus",
   },
   {
-    title: "Testimonial",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: "flat-color-icons:voice-presentation",
+    icon: "logos:c-sharp",
   },
   {
-    title: "Contact",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: "flat-color-icons:business-contact",
+    icon: "logos:java",
   },
   {
-    title: "Footers",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: "icon-park:page-template",
+    icon: "vscode-icons:file-type-reactjs",
+  },
+  {
+    icon: "teenyicons:nextjs-outline",
+  },
+  {
+    icon: "logos:nodejs-icon",
+  },
+  {
+    icon: "logos:nestjs",
+  },
+  {
+    icon: "logos:mysql",
+  },
+  {
+    icon: "logos:postgresql",
+  },
+  {
+    icon: "vscode-icons:file-type-mongo",
+  },
+  {
+    icon: "vscode-icons:file-type-firebase",
   },
 ];

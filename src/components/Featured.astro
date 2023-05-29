@@ -5,21 +5,14 @@ import { items } from "../constants";
 
 <section class="w-10/12 mx-auto">
   <div
-    class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 dark:text-white items-stretch cursor-pointer"
+    class="grid gap-4 my-20 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white items-stretch cursor-pointer"
   >
     {
-      items.map(({ title, description, icon }) => (
+      items.map(({ icon }) => (
         <div class="relative flex flex-col p-4 bg-white dark:bg-zinc-900 rounded shadow-lg hover:shadow-md transition border border-transparent ">
-          <div class="flex items-center">
+          <div class="flex items-center justify-between">
             <Icon name={icon} class="w-10 h-10" />
-            <div class="ml-4 text-xl font-bold">{title}</div>
           </div>
-          {description && (
-            <p
-              class="text-muted dark:text-gray-400 text-md mt-2"
-              set:html={description}
-            />
-          )}
         </div>
       ))
     }

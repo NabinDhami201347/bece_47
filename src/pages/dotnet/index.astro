@@ -4,7 +4,7 @@ import Footer from "../../components/shared/Footer.astro";
 import Header from "../../components/shared/Header.astro";
 import { getCollection } from "astro:content";
 
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { SITE_DESCRIPTION } from "../../consts";
 import { MAX_DISPLAY } from "../../constants";
 import { formatDate } from "../../helpers";
 
@@ -16,7 +16,7 @@ const posts = (await getCollection("dotnet")).sort(
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title="Nabin Dhami | dotnet" description={SITE_DESCRIPTION} />
     <style>
       ul {
         list-style-type: none;

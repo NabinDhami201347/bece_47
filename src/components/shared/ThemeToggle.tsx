@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-// ph:moon-light
-
 export default function ThemeToggle() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "dark");
   const handleClick = () => {
