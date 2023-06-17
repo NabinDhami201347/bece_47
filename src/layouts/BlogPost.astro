@@ -2,9 +2,8 @@
 import BaseHead from "../components/shared/BaseHead.astro";
 import Header from "../components/shared/Header.astro";
 import Footer from "../components/shared/Footer.astro";
-import FormattedDate from "../components/FormattedDate.astro";
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, heroImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -15,21 +14,22 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <body class="bg-slate-50 dark:bg-black text-black dark:text-white">
     <Header />
 
-    <main class="grid grid-cols-5 w-10/12 space-x-2 mx-auto mt-4">
-      <div class="col-span-5 md:col-span-3">
+    <main class="grid grid-cols-6 w-11/12 space-x-2 mx-auto my-6">
+      <div class="col-span-6 md:col-span-4">
         <article
-          class="prose prose-pink dark:prose-invert max-w-none prose-headings:text-pink-400 prose-headings:font-mono"
+          class="prose prose-pink dark:prose-invert max-w-none tracking-tighter antialiased prose-h1:text-3xl prose-h2:text-xl prose-h3:text-lg prose-h2:text-zinc-800 prose-h3:text-zinc-600 dark:prose-h2:text-zinc-200 dark:prose-h3:text-zinc-300"
         >
-          {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-          <FormattedDate date={pubDate} />
           {
-            updatedDate && (
-              <div class="last-updated-on">
-                Last updated on <FormattedDate date={updatedDate} />
-              </div>
+            heroImage && (
+              <img
+                width={800}
+                height={400}
+                class="border-b-4 border-red-600 aspect-video"
+                src={heroImage}
+                alt=""
+              />
             )
           }
-          <hr />
           <slot />
         </article>
       </div>
