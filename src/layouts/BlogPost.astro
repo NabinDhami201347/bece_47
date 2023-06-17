@@ -17,14 +17,14 @@ const { title, description, heroImage } = Astro.props;
     <main class="grid grid-cols-6 w-11/12 space-x-2 mx-auto my-6">
       <div class="col-span-6 md:col-span-4">
         <article
-          class="prose prose-pink dark:prose-invert max-w-none tracking-tighter antialiased prose-h1:text-3xl prose-h2:text-xl prose-h3:text-lg prose-h2:text-zinc-800 prose-h3:text-zinc-600 dark:prose-h2:text-zinc-200 dark:prose-h3:text-zinc-300"
+          class="tracking-tight prose prose-pink dark:prose-invert max-w-none antialiased prose-h1:text-3xl prose-h2:text-xl prose-h3:text-lg dark:prose-p:text-zinc-400 dark:prose-strong:text-zinc-500 dark:prose-headings:text-zinc-200 prose-headings:text-zinc-700 prose-a:text-gray-600 prose-strong:text-gray-600"
         >
           {
             heroImage && (
               <img
                 width={800}
                 height={400}
-                class="border-b-4 border-red-600 aspect-video"
+                class="border-b-2 border-red-600 aspect-video"
                 src={heroImage}
                 alt=""
               />

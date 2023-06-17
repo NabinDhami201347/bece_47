@@ -38,16 +38,14 @@ const posts = (await getCollection("java")).sort(
   <body class="bg-slate-50 dark:bg-black text-black dark:text-white">
     <Header />
     <main class="w-10/12 mx-auto">
-      <section
-        class="grid gap-5 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-5 border-b border-gray-300 dark:border-gray-600 py-6"
-      >
+      <section class="grid gap-5 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-5 py-6">
         {!posts.length && "No posts found."}
         {
           posts.slice(0, MAX_DISPLAY).map((post) => {
             return (
               <div class="relative h-full rounded-lg">
                 <a
-                  href={`/dotnet/${post.slug}`}
+                  href={`/java/${post.slug}`}
                   class="relative block h-full overflow-hidden rounded-lg bg-white dark:bg-zinc-900 shadow-lg hover:shadow-md transition border border-transparent p-4"
                 >
                   <div class="h-full">
