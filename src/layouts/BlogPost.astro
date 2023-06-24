@@ -11,22 +11,20 @@ const { title, description, heroImage } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
 
-  <body class="bg-slate-50 dark:bg-black text-black dark:text-white">
+  <body class="dark:from-zinc-800 dark:to-zinc-900 bg-gradient-to-l from-zinc-50 to-zinc-100 text-white">
     <Header />
 
-    <main class="grid grid-cols-6 w-11/12 space-x-2 mx-auto my-6">
+    <main class="grid grid-cols-6 gap-4 w-11/12 space-x-2 mx-auto my-6">
       <div class="col-span-6 md:col-span-4">
-        <article
-          class="tracking-tight prose prose-pink dark:prose-invert max-w-none antialiased prose-h1:text-3xl prose-h2:text-xl prose-h3:text-lg dark:prose-p:text-zinc-400 dark:prose-strong:text-zinc-500 dark:prose-headings:text-zinc-200 prose-headings:text-zinc-700 prose-a:text-gray-600 prose-strong:text-gray-600"
-        >
+        <article class="prose dark:prose-headings:text-zinc-200 dark:prose-p:text-neutral-400 max-w-none">
           {
             heroImage && (
               <img
                 width={800}
                 height={400}
-                class="border-b-2 border-red-600 aspect-video"
+                class="border-b-2 border-t-2 border-t-teal-600 border-pink-600 aspect-video"
                 src={heroImage}
-                alt=""
+                alt="title"
               />
             )
           }

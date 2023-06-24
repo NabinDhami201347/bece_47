@@ -8,9 +8,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { MAX_DISPLAY } from "../../constants";
 import { formatDate } from "../../helpers";
 
-const posts = (await getCollection("database")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+const posts = (await getCollection("database")).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf());
 ---
 
 <!DOCTYPE html>
@@ -35,8 +33,9 @@ const posts = (await getCollection("database")).sort(
       }
     </style>
   </head>
-  <body class="bg-slate-50 dark:bg-black text-black dark:text-white">
+  <body class="dark:from-zinc-800 dark:to-zinc-900 bg-gradient-to-r from-zinc-50 to-zinc-100 dark:text-white">
     <Header />
+
     <main class="w-10/12 mx-auto">
       <section class="grid gap-5 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-5 py-6">
         {!posts.length && "No posts found."}
@@ -50,17 +49,13 @@ const posts = (await getCollection("database")).sort(
                 >
                   <div class="h-full">
                     <div class="flex items-center justify-between">
-                      <h2 class="mt-2 mb-2 block font-bold text-pink-400">
-                        {post.data.title}
-                      </h2>
+                      <h2 class="mt-2 mb-2 block font-bold text-pink-400">{post.data.title}</h2>
                       <p class="text-sm text-gray-500">
                         <time>{formatDate(post.data.pubDate)}</time>
                       </p>
                     </div>
 
-                    <p class="h-auto text-sm dark:text-gray-200 text-justify">
-                      {post.data.description}
-                    </p>
+                    <p class="h-auto text-sm dark:text-gray-200 text-justify">{post.data.description}</p>
                   </div>
                 </a>
               </div>
@@ -71,11 +66,7 @@ const posts = (await getCollection("database")).sort(
       {
         posts.length > MAX_DISPLAY && (
           <div class="flex justify-end text-base font-medium leading-6">
-            <a
-              href="/database"
-              class="my-2 hover:text-sky-400"
-              aria-label="all posts"
-            >
+            <a href="/database" class="my-2 hover:text-sky-400" aria-label="all posts">
               All Posts &rarr;
             </a>
           </div>
